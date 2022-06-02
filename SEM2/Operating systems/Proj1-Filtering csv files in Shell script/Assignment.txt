@@ -1,0 +1,90 @@
+Popis úlohy:
+-Cílem úlohy je vytvořit shellový skript pro analýzu záznamů osob s prokázanou nákazou koronavirem způsobujícím onemocnění COVID-19 na území České republiky. Skript bude 
+ filtrovat záznamy a poskytovat základní statistiky podle zadání uživatele.
+
+----------
+
+Specifikace rozhraní skriptu:
+-JMÉNO : corona — analyzátor záznamů osob s prokázanou nákazou koronavirem způsobujícím onemocnění COVID-19
+-POUŽITÍ : corona [-h] [FILTERS] [COMMAND] [LOG [LOG2 [...]]
+-VOLBY : 1.COMMAND může být jeden z:
+	infected — spočítá počet nakažených.
+	merge — sloučí několik souborů se záznamy do jednoho, zachovávající původní pořadí (hlavička bude ve výstupu jen jednou).
+	gender — vypíše počet nakažených pro jednotlivá pohlaví.
+	age — vypíše statistiku počtu nakažených osob dle věku (bližší popis je níže).
+	daily — vypíše statistiku nakažených osob pro jednotlivé dny.
+	monthly — vypíše statistiku nakažených osob pro jednotlivé měsíce.
+	yearly — vypíše statistiku nakažených osob pro jednotlivé roky.
+	countries — vypíše statistiku nakažených osob pro jednotlivé země nákazy (bez ČR, tj. kódu CZ).
+	districts — vypíše statistiku nakažených osob pro jednotlivé okresy.
+	regions — vypíše statistiku nakažených osob pro jednotlivé kraje.
+
+	2.FILTERS může být kombinace následujících (každý maximálně jednou):
+	-a DATETIME — after: jsou uvažovány pouze záznamy PO tomto datu (včetně tohoto data). DATETIME je formátu YYYY-MM-DD.
+	-b DATETIME — before: jsou uvažovány pouze záznamy PŘED tímto datem (včetně tohoto data).
+	-g GENDER — jsou uvažovány pouze záznamy nakažených osob daného pohlaví. GENDER může být M (muži) nebo Z (ženy).
+	-s [WIDTH] u příkazů gender, age, daily, monthly, yearly, countries, districts a regions vypisuje data ne číselně, ale graficky v podobě histogramů. Nepovinný parametr WIDTH 
+	 nastavuje šířku histogramů, tedy délku nejdelšího řádku, na WIDTH. Tedy, WIDTH musí být kladné celé číslo. Pokud není parametr WIDTH uveden, řídí se šířky řádků požadavky 
+	 uvedenými níže.
+	-h — vypíše nápovědu s krátkým popisem každého příkazu a přepínače.
+
+----------
+
+Popis:
+Skript filtruje záznamy osob s prokázanou nákazou koronavirem způsobujícím onemocnění COVID-19. Pokud je skriptu zadán také příkaz, nad filtrovanými záznamy daný příkaz provede. 
+Pokud příkaz zadán není, implicitně se použije příkaz merge.
+Pokud skript nedostane ani filtr ani příkaz, opisuje záznamy na standardní výstup.
+Skript umí zpracovat i záznamy komprimované pomocí nástrojů gzip a bzip2 (v případě, že název souboru končí .gz resp. .bz2).
+V případě, že skript na příkazové řádce nedostane soubory se záznamy (LOG, LOG2, …), očekává záznamy na standardním vstupu.
+Grafy jsou vykresleny pomocí ASCII a jsou otočené doprava. Hodnota řádku je vyobrazena posloupností znaku mřížky #.
+Podrobné požadavky
+Skript analyzuje záznamy ze zadaných souborů v daném pořadí.
+
+Formát souboru se záznamy je CSV, kde oddělovačem je znak čárky ,. Celý soubor je v kódování ASCII. Formát je řádkový, každý neprázdný řádek (prázdné řádky jsou takové, které 
+obsahují jen bílé znaky) odpovídá záznamu o jedné nákaze osoby ve tvaru (následující je hlavička CSV souboru)
+
+id,datum,vek,pohlavi,kraj_nuts_kod,okres_lau_kod,nakaza_v_zahranici,nakaza_zeme_csu_kod,reportovano_khs
+
+	id je identifikátor záznamu (řetězec neobsahující bílé znaky a znak čárky ,),
+	datum je ve formátu YYYY-MM-DD,
+	vek je kladné celé číslo,
+	pohlavi je M (muž) nebo Z (žena),
+	kraj_nuts_kod je kód kraje, kde byla nákaza zjištěna,
+	okres_lau_kod je kód okresu, kde byla nákaza zjištěna,
+	nakaza_v_zahranici značí, zda zdroj nákazy byl v zahraničí (1 značí, že zdroj nákazy byl v zahraničí, prázdné pole značí, že nebyl),
+	nakaza_zeme_csu_kod je kód země vzniku nákazy (pro nákazu vzniklou v zahraničí),
+	reportovano_khs značí, zda byla nákaza reportována krajské hygienické stanici.
+	Příklad souboru se třemi záznamy:
+
+Skript žádný soubor nemodifikuje. Skript nepoužívá dočasné soubory.
+
+Záznamy ve vstupních souborech nemusí být uvedeny chronologicky a je-li na vstupu více souborů, jejich pořadí také nemusí být chronologické.
+
+Pokud není při použití přepínače -s uvedena šířka WIDTH, pak každý výskyt symbolu # v grafu odpovídá počtu nákaz (zaokrouhleno dolů) dle příkazu následujícím způsobem:
+
+gender — 100 000
+age — 10 000
+daily — 500
+monthly — 10 000
+yearly — 100 000
+countries — 100
+districts — 1 000
+regions — 10 000
+Při použití přepínače -s s uvedenou šířkou WIDTH je počet nákaz na mřížku upraven podle největšího počtu výskytů v řádku grafu. Řádek s největší hodnotou bude mít počet 
+mřížek WIDTH a ostatní řádky budou mít proporcionální počet mřížek vzhledem k největší hodnotě. Při dělení zaokrouhlujte dolů. Tedy např. při -s 6 a řádku s největší hodnotou 
+1234 bude řádek s touto hodnotou vypadat takto: ######.
+
+Pořadí argumentů stačí uvažovat takové, že nejdřív budou všechny přepínače, pak (volitelně) příkaz a nakonec seznam vstupních souborů (lze tedy použít getopts).
+
+Předpokládejte, že vstupní soubory nemůžou mít jména odpovídající některému příkazu nebo přepínači.
+
+V případě uvedení přepínače -h se vždy pouze vypíše nápověda a skript skončí (tedy, pokud by za přepínačem následoval nějaký příkaz nebo soubor, neprovede se).
+
+V případě neexistující hodnoty atributu u příkazů gender, age, daily, monthly, yearly, districts, regions agregujte záznamy s neexistující hodnotou pod hodnotu None, 
+kterou ve výpisech uvádějte jako poslední.
+
+Přepodkládejte, že je-li v záznamu uvedena hodnota pro nějaký atribut záznamu, pak je korektní (tj. není potřeba validovat vstup) s následujícími výjimkami:
+
+ve sloupci datum je očekáváno korektní datum ve formátu YYYY-MM-DD, které odpovídá skutečnému dni (tedy, např., yesterday nebo 2020-02-30 jsou nevalidní hodnoty).
+ve sloupci vek je očekáváno nezáporné celé číslo (tedy, např., -42, 18.5 nebo 1e10 jsou nevalidní hodnoty).
+V případě detekování záznamu porušujícího některou z podmínek uvedených výše vypište chybu na chybový výstup a pokračujte ve zpracovávání dále (chybějící hodnota data/věku není porušením). Formát pro chybu je následující:

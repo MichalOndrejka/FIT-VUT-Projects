@@ -1,0 +1,11 @@
+Popis projektu:
+-Navrhněte obvod pro příjem datových slov po asynchronní sériové lince (UART_RX).
+   1. Vycházejte ze základních informací o fungování a zpracování asynchronní sériové komunikace uvedených v následující kapitole.
+   2. Uvažujte vstupní tok dat v pevném formátu: jeden START bit, 8 bitů dat, jeden STOP bit, zasílaných rychlostí 9600 baudů za sekundu. Přijímací obvod bude 
+      pracovat na 16x vyšší frekvenci (signál CLK) ve srovnání s přenosovou rychlostí jednotlivých datových bitů. Vašim úkolem bude snímat datové bity uprostřed 
+      přenášeného intervalu (viz. obrázek 3).
+   3. Obvod UART_RX bude přijímat jednotlivé bity na vstupním datovém portu DIN, provede jejich de-serializaci a výsledné 8-bitové slovo zapíše na datový port DOUT. 
+      Platnost datového slova na portu DOUT potvrďte nastavením příznaku DOUT_VLD na úroveň logické 1 po dobu jednoho taktu hodinového signálu CLK. Příklad časového diagramu 
+      ukazujícího očekávaný průběh signálů na vstupně/výstupních portech komponenty UART_RX je znázorněn na obrázku 3.
+   4. Jednotlivé části datové cesty obvodu bude potřeba ovládat skrze konečný automat (Finite State Machine). Sestavte si nejprve graf přechodů tohoto automatu.
+   5. Při návrhu nezapomeňte ošetřit asynchronní vstup do synchronní sítě obvodu UART_RX pro redukci možných metastabilních stavů.
