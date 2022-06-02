@@ -1,0 +1,15 @@
+5: Evidence úředníků
+Konzultant: ing. Pavela
+Král Čapího království se rozhodl zredukovat počet úředníků, protože v jeho království je nedostatek poddaných, kteří by vytvářeli hodnoty. Nejdříve však potřebuje zmapovat, 
+kolik úředníků a v jakých funkcích si vlastně platí. Nechcete-li být o hlavu kratší, navrhněte ER diagram královského informačního systému pro evidenci úředníků (KIS EU) podle 
+následujících požadavků. Úředníci budou v KIS EU identifikováni svým osobním číslem a dále bude zaznamenáno jejich jméno, příjmení, datum narození, pohlaví, mají-li, šlechtický 
+titul, na kterých školách studovali (včetně oboru, stupně a toho, kdy studium začalo a kdy skončilo, zda bylo zakončeno úspěšně, případně získaný akademický titul), skterými 
+úředníky jsou v rodinném či jiném vztahu (kvůli střetu zájmů), jaké funkce zastávali (od kdy, do kdy, a pokud některou funkci již nezastávají, důvod jejího opuštění) a jaká 
+úřední rozhodnutí ve své kariéře udělali (každé rozhodnutí spadá pod určitý úřad, má v rámci království přiděleno unikátní číslo jednací, datum rozhodnutí, datum vykonatelnosti, 
+text vlastního rozhodnutí a text jeho odůvodnění). KIS EU musí být připraven i na situaci, že některý úředník (nebo dokonce celý úřad) dosud žádné rozhodnutí neudělal. Každý 
+úřad má jednoznačnou zkratku, název, sídlo, je určitého typu (např. soudní, berní, robotní nebo vzdělávací -- i školy tedy plní roli úřadů) a je mu přidělena územní působnost 
+(království, země, region, hrabství, okres či obec). Přesné územní členění království není třeba zachycovat. V KIS EU bude uveden nadřízený úřad (kromě úřadu krále, který nemá 
+nadřízeného), kdy byl úřad zřízen, na základě jakého zřizovacího dokumentu, u již neexistujících úřadů, kdy úřad zanikl, a všechny funkce, které jsou či byly v daném úřadu 
+zavedeny. Funkce má v rámci daného úřadu jednoznačný kód, dále pak název, způsob, jakým lze funkci získat, délku funkčního období, nadřízenou funkci (vyjma nejvyšší funkce 
+úřadu), kdy byla funkce na úřadu zavedena, kdy zase zrušena, kdo a kdy ji zastával, a to včetně pořadí obsazení této funkce. Počítejte s tím, že jeden úředník může současně 
+zastávat více funkcí (i na více úřadech) a že stejnou funkci může (i s přestávkami) zastávat opakovaně.

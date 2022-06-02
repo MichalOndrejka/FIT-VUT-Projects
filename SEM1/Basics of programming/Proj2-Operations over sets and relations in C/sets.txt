@@ -1,0 +1,6 @@
+U aksnfisn sjcsujcu sjcnsjcnsj nsjcbsjcjs jsj j
+S a b c x
+S x y z
+R
+C intersect 2 3
+C minus 2 3
