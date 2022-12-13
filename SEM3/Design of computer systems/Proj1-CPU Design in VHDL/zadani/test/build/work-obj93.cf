@@ -1,0 +1,4 @@
+v 4
+file "/homes/eva/xo/xondre15/inp22-projekt1/zadani/test/" "../src/cpu.vhd" "011fdbb7f7b66162d599a38b57d4a0a8580a6bf3" "20221112224059.601":
+  entity cpu at 6( 217) + 0 on 11;
+  architecture behavioral of cpu at 43( 1943) + 0 on 12;

@@ -1,0 +1,14 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1668292859" />
+    <testcase name="test_reset" classname="cpu" file="/homes/eva/xo/xondre15/inp22-projekt1/zadani/test/cpu_lib.py" lineno="10" time="0.002975940704345703" sim_time_ns="51.000001" ratio_time="17137.438567080917" />
+    <testcase name="test_increment" classname="cpu" file="/homes/eva/xo/xondre15/inp22-projekt1/zadani/test/cpu_lib.py" lineno="24" time="0.01673722267150879" sim_time_ns="330.000001" ratio_time="19716.532872669963" />
+    <testcase name="test_decrement" classname="cpu" file="/homes/eva/xo/xondre15/inp22-projekt1/zadani/test/cpu_lib.py" lineno="32" time="0.016169309616088867" sim_time_ns="330.000001" ratio_time="20409.034698156916" />
+    <testcase name="test_move" classname="cpu" file="/homes/eva/xo/xondre15/inp22-projekt1/zadani/test/cpu_lib.py" lineno="40" time="0.014435052871704102" sim_time_ns="220.000001" ratio_time="15240.67857286818" />
+    <testcase name="test_print" classname="cpu" file="/homes/eva/xo/xondre15/inp22-projekt1/zadani/test/cpu_lib.py" lineno="48" time="0.04571413993835449" sim_time_ns="1220.0000009999999" ratio_time="26687.58512454067" />
+    <testcase name="test_input" classname="cpu" file="/homes/eva/xo/xondre15/inp22-projekt1/zadani/test/cpu_lib.py" lineno="55" time="0.10000228881835938" sim_time_ns="2380.0000010000003" ratio_time="23799.45528369804" />
+    <testcase name="test_while_loop" classname="cpu" file="/homes/eva/xo/xondre15/inp22-projekt1/zadani/test/cpu_lib.py" lineno="65" time="0.05256175994873047" sim_time_ns="1400.0000009999994" ratio_time="26635.333412838165" />
+    <testcase name="test_do_loop" classname="cpu" file="/homes/eva/xo/xondre15/inp22-projekt1/zadani/test/cpu_lib.py" lineno="72" time="0.03206205368041992" sim_time_ns="750.0000010000003" ratio_time="23392.138522243826" />
+    <testcase name="test_login_xondre15" classname="cpu" file="&lt;makefun-gen-1&gt;" lineno="1" time="9.434155702590942" sim_time_ns="242180.000001" ratio_time="25670.55363888992" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,123 @@
+C203 - Linked List, Basic Tests
+===============================
+
+[test_init] Inicializace fronty
+Queue elements : **********
+                 ^         
+                 E         
+
+
+[test_empty_empty] Kontrola prázdnosti fronty v prázdné frontě
+Queue elements : **********
+                 ^         
+                 E         
+Is queue empty? Yes
+
+
+[test_full_empty] Kontrola plnosti fronty v prázdné frontě
+Queue elements : **********
+                 ^         
+                 E         
+Is queue full? No
+
+
+[test_front_empty] Výpis čela v prázdné frontě
+Queue elements : **********
+                 ^         
+                 E         
+Queue error: FRONT
+
+
+[test_remove_empty] Odstranění čela v prázdné frontě
+Queue elements : **********
+                 ^         
+                 E         
+Queue error: REMOVE
+
+
+[test_get_empty] Uvolnění čela v prázdné frontě
+Queue elements : **********
+                 ^         
+                 E         
+Queue error: DEQUEUE
+
+
+[test_up] Vložení do fronty
+Queue elements : **********
+                 ^         
+                 E         
+Queue elements : H*********
+                 ^^        
+                 FB        
+Queue elements : He********
+                 ^ ^       
+                 F B       
+Queue elements : Hel*******
+                 ^  ^      
+                 F  B      
+Queue elements : Hell******
+                 ^   ^     
+                 F   B     
+Queue elements : Hello*****
+                 ^    ^    
+                 F    B    
+
+
+[test_up_full] Vložení do plné fronty
+Queue elements : 012345678*
+                 ^        ^
+                 F        B
+Queue error: ENQUEUE
+Queue error: ENQUEUE
+Queue error: ENQUEUE
+Queue elements : 012345678*
+                 ^        ^
+                 F        B
+
+
+[test_empty_full] Kontrola prázdnosti fronty v plné frontě
+Queue elements : 012345678*
+                 ^        ^
+                 F        B
+Is queue empty? No
+
+
+[test_full_full] Kontrola plnosti fronty v plné frontě
+Queue elements : 012345678*
+                 ^        ^
+                 F        B
+Is queue full? Yes
+
+
+[test_remove] Odstranění z čela fronty
+Queue elements : 012*******
+                 ^  ^      
+                 F  B      
+Queue elements : 012*******
+                  ^ ^      
+                  F B      
+Queue elements : 012*******
+                   ^^      
+                   FB      
+Queue elements : 012*******
+                    ^      
+                    E      
+
+
+[test_get] Uvolnění z čela fronty
+Queue elements : 012*******
+                 ^  ^      
+                 F  B      
+Queue elements : 012*******
+                  ^ ^      
+                  F B      
+Returned value : 0
+Queue elements : 012*******
+                   ^^      
+                   FB      
+Returned value : 1
+Queue elements : 012*******
+                    ^      
+                    E      
+Returned value : 2
+

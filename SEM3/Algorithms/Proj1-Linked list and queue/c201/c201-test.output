@@ -1,0 +1,157 @@
+C201 - Linked List, Basic Tests
+===============================
+
+[test_init] Inicializace struktury
+List elements  : none (list is empty)
+First element  : not initialised (list is empty)
+Active element : not initialised (no item is active)
+
+
+[test_get_first_empty] Získání hodnoty prvního prvku v prázdném seznamu
+List elements  : none (list is empty)
+First element  : not initialised (list is empty)
+Active element : not initialised (no item is active)
+*ERROR* The program has performed an illegal operation.
+
+
+[test_first_empty] Aktivace prvního prvku v prázdném seznamu
+List elements  : none (list is empty)
+First element  : not initialised (list is empty)
+Active element : not initialised (no item is active)
+Active element : not initialised (no item is active)
+
+
+[test_insert_first] Vkládání nových prvků na první místo
+List elements  : 1 2 3 4
+First element  : 1
+Active element : not initialised (no item is active)
+
+
+[test_get_value_inactive] Získání hodnoty prvku v seznamu bez aktivního prvku
+List elements  : 1 2 3
+First element  : 1
+Active element : not initialised (no item is active)
+*ERROR* The program has performed an illegal operation.
+
+
+[test_set_value_inactive] Aktualizace hodnoty prvku v seznamu bez aktivního prvku
+List elements  : 1 2 3
+First element  : 1
+Active element : not initialised (no item is active)
+List elements  : 1 2 3
+First element  : 1
+Active element : not initialised (no item is active)
+
+
+[test_next_inactive] Aktivace následujícího prvku v seznamu bez aktivního prvku
+List elements  : 1 2 3
+First element  : 1
+Active element : not initialised (no item is active)
+Active element : not initialised (no item is active)
+
+
+[test_get_first] Získání hodnoty prvního prvku
+List elements  : 1 2 3
+First element  : 1
+Active element : not initialised (no item is active)
+Returned value : 1
+
+
+[test_get_value] Získání hodnot aktivních prvků
+List elements  : 1 2 3
+First element  : 1
+Active element : not initialised (no item is active)
+Returned value : 1
+Returned value : 2
+Returned value : 3
+
+
+[test_set_value] Aktualizace hodnot aktivních prvků
+List elements  : 1 2 3
+First element  : 1
+Active element : not initialised (no item is active)
+List elements  : 3 2 3
+First element  : 3
+Active element : 3
+List elements  : 3 2 1
+First element  : 3
+Active element : 1
+
+
+[test_is_active] Aktivita seznamu
+List elements  : 1 2 3
+First element  : 1
+Active element : not initialised (no item is active)
+Is list element active? No
+Is list element active? Yes
+Is list element active? Yes
+Is list element active? Yes
+Is list element active? No
+
+
+[test_first_next_activity] Nastavení aktivity na následnících
+Active element : not initialised (no item is active)
+List elements  : 1 2 3
+First element  : 1
+Active element : 1
+Active element : 2
+Active element : 3
+Active element : not initialised (no item is active)
+
+
+[test_insert_after] Vložení několika prvků na poslední místo
+List elements  : 1
+First element  : 1
+Active element : not initialised (no item is active)
+List elements  : 1 2
+First element  : 1
+Active element : 1
+List elements  : 1 2 3
+First element  : 1
+Active element : 2
+List elements  : 1 2 3 4
+First element  : 1
+Active element : 3
+
+
+[test_delete_first] Zrušení prvního prvku v seznamu
+List elements  : 3 2 1
+First element  : 3
+Active element : not initialised (no item is active)
+List elements  : 2 1
+First element  : 2
+Active element : not initialised (no item is active)
+List elements  : 1
+First element  : 1
+Active element : not initialised (no item is active)
+List elements  : none (list is empty)
+First element  : not initialised (list is empty)
+Active element : not initialised (no item is active)
+List elements  : none (list is empty)
+First element  : not initialised (list is empty)
+Active element : not initialised (no item is active)
+
+
+[test_delete_after] Zrušení prvku po aktivním prvku
+List elements  : 1 1 2 2 3 3
+First element  : 1
+Active element : not initialised (no item is active)
+List elements  : 1 2 2 3 3
+First element  : 1
+Active element : 1
+List elements  : 1 2 3 3
+First element  : 1
+Active element : 2
+List elements  : 1 2 3
+First element  : 1
+Active element : 3
+
+
+[test_dispose] Zrušení prvků seznamu
+List elements  : 1 2 3
+First element  : 1
+Active element : not initialised (no item is active)
+List elements  : none (list is empty)
+First element  : not initialised (list is empty)
+Active element : not initialised (no item is active)
+

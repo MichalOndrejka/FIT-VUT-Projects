@@ -1,0 +1,69 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11e vcom 2022.3 2022.07, Jul 18 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/homes/eva/xo/xondre15/inp22-projekt1/zadani/test
+T_opt
+!s110 1668292503
+VW`3AYHSDeFS[6Xd4M_MJ[2
+04 3 10 work cpu behavioral 1
+=1-002590e2db3c-63701f97-5b4d5-69cc
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2022.3;75
+Ecpu
+Z2 w1668292056
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
+Z4 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
+Z5 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z6 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+R1
+Z7 8../src/cpu.vhd
+Z8 F../src/cpu.vhd
+l0
+L14 1
+Vnn1;>]fjC3zWSOG9S_BnO0
+!s100 E9Pc6hDS=KJY0]c[kCk@R0
+Z9 OL;C;2022.3;75
+32
+Z10 !s110 1668292501
+!i10b 1
+Z11 !s108 1668292501.000000
+Z12 !s90 -reportprogress|300|-work|work|+acc|../src/cpu.vhd|
+Z13 !s107 ../src/cpu.vhd|
+!i113 0
+Z14 o-work work +acc
+Z15 tExplicit 1 CvgOpt 0
+Abehavioral
+R3
+R4
+R5
+R6
+DEx4 work 3 cpu 0 22 nn1;>]fjC3zWSOG9S_BnO0
+!i122 0
+l79
+L43 376
+V9Z:f_IVDJ2H@0B4_oYEXP2
+!s100 G<m?8fXDz9dW;F74:H2IR2
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15

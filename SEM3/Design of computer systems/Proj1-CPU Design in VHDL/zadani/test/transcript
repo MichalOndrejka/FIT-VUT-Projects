@@ -1,0 +1,72 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2022.3 linux_x86_64 Jul 18 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do ./build/runsim.do
+# QuestaSim-64 vmap 2022.3 Lib Mapping Utility 2022.07 Jul 18 2022
+# vmap -c 
+# ** Warning: vmap will not overwrite local modelsim.ini.
+# QuestaSim-64 vmap 2022.3 Lib Mapping Utility 2022.07 Jul 18 2022
+# vmap work build/work 
+# Modifying modelsim.ini
+# QuestaSim-64 vcom 2022.3 Compiler 2022.07 Jul 18 2022
+# Start time: 23:35:01 on Nov 12,2022
+# vcom -reportprogress 300 -work work "+acc" ../src/cpu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity cpu
+# -- Compiling architecture behavioral of cpu
+# End time: 23:35:01 on Nov 12,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish exit -foreign "cocotb_init /homes/eva/xo/xondre15/inp22-projekt1/env/lib/python3.8/site-packages/cocotb/libs/libcocotbfli_modelsim.so" work.cpu 
+# Start time: 23:35:03 on Nov 12,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "cpu(behavioral)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cpu(behavioral)#1
+# Loading /homes/eva/xo/xondre15/inp22-projekt1/env/lib/python3.8/site-packages/cocotb/libs/libcocotbfli_modelsim.so
+#      -.--ns INFO     gpi                                ..ib/fli/FliImpl.cpp:1131 in cocotb_init                     cocotb_init called
+#      -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:109  in set_program_name_in_venv        Using Python virtual environment interpreter at /homes/eva/xo/xondre15/inp22-projekt1/env/bin/python
+#      -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       FLI registered
+#      0.00ns INFO     cocotb                             Running on ModelSim for Questa-64 version 2022.3 2022.07
+#      0.00ns INFO     cocotb                             Running tests with cocotb v1.7.1 from /homes/eva/xo/xondre15/inp22-projekt1/env/lib/python3.8/site-packages/cocotb
+#      0.00ns INFO     cocotb                             Seeding Python random module with 1668292520
+#      0.00ns INFO     cocotb.hexdigest                   lib: 8d35cc842ac3015bb2b0b725be80fa16
+#      0.00ns INFO     cocotb.regression                  Found test cpu.test_login_xondre15
+#      0.00ns INFO     cocotb.regression                  running test_login_xondre15 (1/1)
+#                                                           Executes program in login.b file
+#      0.00ns INFO     cocotb.hexdigest                   test: c197b2b8fb51fd562f2e8eed82eeb35f
+#      1.00ns INFO     cocotb.hexdigest                   code: b9a5517b157b2a690315af056c1fda5b
+# 242180.00ns INFO     cocotb.hexdigest                   result: ffe7e10ff90e9c8170d8240579f44c1b
+# 242181.00ns INFO     cocotb.regression                  test_login_xondre15 passed
+# 242181.00ns INFO     cocotb.regression                  **************************************************************************************
+#                                                         ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+#                                                         **************************************************************************************
+#                                                         ** cpu.test_login_xondre15        PASS      242181.00          14.16      17105.02  **
+#                                                         **************************************************************************************
+#                                                         ** TESTS=1 PASS=1 FAIL=0 SKIP=0             242181.00          14.59      16598.29  **
+#                                                         **************************************************************************************
+#                                                         
+# Simulation halt requested by foreign interface.
+# End time: 23:40:52 on Nov 12,2022, Elapsed time: 0:05:49
+# Errors: 0, Warnings: 1
