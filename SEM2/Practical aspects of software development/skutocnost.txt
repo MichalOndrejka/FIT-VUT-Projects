@@ -1,0 +1,10 @@
+[PLAN] -- [REALITA]
+Rovnomerné rozloženie projektu -- Nerovnomrené rozloženie
+Všetky časti projektu rozdelené -- Neskôr sme prišli na nové funkcie, algoritmy, ...
+Dodržanie stanovených termínov -- Niektoré termíny sme bohužiaľ nestihli
+Dokumentacia kódu v doxygene -- Vytvorenie dokumentacie sa nepodarilo
+Pravidelné konzultácie ohľadom projektu -- Pravidelné teambuildingy v kachne pri toustech a pive, konzultace na discordu
+-zo začiatku problémy s GITom (zlé komenty commitov, nepravidelné commity)
+
+
+

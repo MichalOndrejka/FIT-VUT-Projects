@@ -1,0 +1,28 @@
+Termíny:
+- 24.3.2022 - Prístup vyučujúceho do repozitáru
+- 26.3.2022 - Testy matematických funkcií
+- 2.4.2022 - Matematické funkcie
+- 23.4.2022 - Grafické rozhranie
+- 25.4.2022 - Produkt
+- 3.5.2022 - Instalace
+- 17.5.2022 - Problémy	
+
+Pridelenie úloh na projekte jednotlivým členom týmu:
+- spoločne:
+	testy matematických funkcií, code review
+- xondre15: 
+	uživateľské rozhranie
+- xpodra03: 
+	sčítanie, odčítanie, násobenie, delenie
+- xbalog05: 
+	obecná odmocnina, dokumentácia, návod na inštaláciu
+- xtruch01: 
+	faktoriál, umocňovanie s prirodzenými exponentami, absolútna hodnota
+
+Komunikačné kanály pre komunikáciu:
+- meetingy na discord každý týždeň, messenger, kachna
+- Pravidlá pre komunikáciu: formálna komunikácia, 
+
+Zvolený systém pre správu verzií a hosting:
+- GIT HUB: vyučujúci bude môcť sledovať priebeh vývoju software na GIT HUB
+- https://github.com/MichalOndrejka/Projekt2_-ivs

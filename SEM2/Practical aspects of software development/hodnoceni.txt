@@ -1,0 +1,15 @@
+Přidělené úlohy
+    - xondre15 100% - uživatelské rozhraní, správa repozitáře, Makefile a soubory skutečnost a README
+    - xtruch01 100% - pokročilé matematické funkce (faktoriál, umocnění, absolutní hodnota), instalátor
+    - xpodra03 100% - základní matematické operace a odmocnina, správa komunikačních kanálů a hodnocení
+    - xbalog05 100% - dokumentace, uživatelská příručka, debbuging, mockup, logo aplikace a komentáře kódu
+
+Společně:
+    - Plánovaní projektu
+    - Wireframe na konzultace
+    - Testy matematické knihovny
+    - Párové programovaní - základní kostra projektu
+    - Vytvoření repozitáře v GIT
+    - CodeReview
+    
+
